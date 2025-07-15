@@ -1,4 +1,3 @@
- let estudante = 'Julia';
- let professora =  'Vitoria';
- 
- console.log("Alunos e estudantes: ", estudante, professora);
+let criadores = 'Vick&8';
+
+console.log(criadores);
