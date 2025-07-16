@@ -34,6 +34,34 @@ function classificacao(valorIMC)
     }
     else
     {
-        return 'Está com obesidae de grau 3';
+        return 'Está com obesidade de grau 3';
     }
 }
+
+function resultado(mensagem)
+{
+    const resultado = document.getElementById('resultado');
+    resultado.textContent = mensagem;
+}   
+
+function Imc()
+{
+    const sexo = getInputValue('sexo');
+    const altura = parseFloat(getInputValue('altura'));
+    const peso = parseFloat(getInputValue('peso'));
+
+    if(nome && altura && peso)
+    {
+        const valorIMC = calcularIMC(peso, altura);
+        const classificacao = classificacao(valorIMC);
+        const mensagem = '${nome}, seu Imc é ${valorIMC} e voce está ${classificacao}';
+        resultado(mensagem);
+    }   
+        else
+        {
+            resultado('Preencha todos os campos!');
+        }
+
+}
+calcular.addEventListener('click', imc);
+
