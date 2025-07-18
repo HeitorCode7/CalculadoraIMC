@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
 @font-face {
     font-family: 'Koulen';
     src: url(../assets/font/AMOQz46as3KIBPeWgnA9kuYMUg.ttf) format('truetype');
@@ -15,6 +17,7 @@
 
     --font-primaria: 'Kumbh Sans', sans-serif;
     --font-titulo: 'Koulen', sans-serif;
+    --font-secundaria: 'League Spartan', sans-serif;
 }
 
 * {
@@ -25,6 +28,25 @@
 body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
+}
+
+.cabecalho__menu__links {
+    font-family: var(--font-secundaria);
+    font-size: 20px;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 30px;
+    height: 40px;
+}
+
+.cabecalho {
+    padding: 1% 0% 0% 5%;
+    background-color: var(--cor-terciaria);
 }
 
 .apresentacao {
@@ -118,9 +140,4 @@ body {
     border-top: 3px solid #3fa9f5;
     border-radius: 27px;
     z-index: -1;
-}
-
-.apresentacao__rect_calculadora__resultado {
-
-
 }
