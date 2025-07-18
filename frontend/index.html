@@ -10,15 +10,15 @@
 <body>
     <header class="cabecalho">
         <nav class="cabecalho__menu"> 
-            <a class="cabecalho__menu__links" href="#calculadora.html">Calculadora</a>
-            <a class="cabecalho__menu__links" href="#tabela.html">Tabela</a>
+            <a class="cabecalho__menu__links" href="#calculadora">Calculadora</a>
+            <a class="cabecalho__menu__links" href="#tabela">Tabela</a>
         </nav>
     </header> 
    
-    <main class="apresentacao">
+    <main class="apresentacao" id="calculadora">
         <section class="apresentacao_conteudo">
             <h1 class="apresentacao__conteudo__titulo">CALCULADORA IMC</h1>
-            <h2 class="apresentacao__conteudo__subtitulo">Calculo do Índice de Massa Corporal</h2>
+            <h2 class="apresentacao__conteudo__subtitulo">Cálculo do Índice de Massa Corporal</h2>
             <div class="linha"></div>
             <p class="apresentacao__conteudo__texto">O índice é calculado da seguinte maneira: divide-se o peso do 
             paciente pela sua altura elevada ao quadrado. Diz-se que o 
@@ -28,7 +28,7 @@
             <div class="apresentacao__rect_calculadora__resultado"><p>Seu IMC é: </p><div>
         </section>
     </main>
-    <section class="tabela">
+    <section class="tabela" id="tabela">
         <h2 class="tabela__titulo">Interpretação do IMC:</h2>
         <table class="tabela__imc">
             <thead>
@@ -63,8 +63,14 @@
                     <td>Obesidade grau III</td>
                 </tr>
             </tbody>
-
         </table>
     </section>
+    <footer class="rodape">
+        <p class="rodape__titulo">Desenvolvido por:</p>
+        <div class="rodape__botoes">
+            <p>Victória Montes<a class="rodape__botoes__links" href="https://github.com/vicktxor"  target="_blank"> <img src="./assets/image/github.png" alt="Logo Github">GITHUB</a></p>
+            <p>Heitor Araújo<a class="rodape__botoes__links" href="https://github.com/HeitorCode7"  target="_blank"> <img src="./assets/image/github.png" alt="Logo Github"> GITHUB</a></p>
+        </div>
+    </footer>
 </body>
 </html>
