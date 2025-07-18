@@ -42,6 +42,8 @@ body {
     font-size: 96px;
     color: var(--cor-terciaria);
     font-family: var(--font-titulo);
+    text-shadow: 2px 2px 0 var(--cor-secundaria);
+    letter-spacing: 2px;
 }
 
 .apresentacao__conteudo__subtitulo {
@@ -55,12 +57,19 @@ body {
     
 }
 
+.linha {
+    background-color: var(--cor-secundaria);
+    width: 123px;
+    height: 2px;
+    margin-right: 360px;
+    margin-bottom: 11px;
+}
 .apresentacao__conteudo__texto {
     color: var(--cor-secundaria);
     font-family: var(--font-primaria);
     font-size: 16px;
     text-align: center;
-    width: 600px;   
+    width: 500px;   
 }
 /*
 .rect_calculadora {
@@ -112,6 +121,6 @@ body {
 }
 
 .apresentacao__rect_calculadora__resultado {
-    
+
 
 }
