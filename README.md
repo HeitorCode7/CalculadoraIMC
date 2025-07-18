@@ -26,3 +26,13 @@
     display: flex;
     justify-content: center;
 }
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+}
+
+
+.tabela__imc td:not(:last-child), .tabela__imc th:not(:last-child) {
+    border-right: 1px solid var(--cor-primaria);
+}

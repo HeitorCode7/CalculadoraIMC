@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap');
 
 @font-face {
     font-family: 'Koulen';
@@ -12,7 +13,7 @@
     --cor-primaria: #000000;
     --cor-secundaria: #FFFFFF;
     --cor-terciaria: #48A7E2;
-    --cor-subtitulo: #D9D9D9;
+    --cor-quartenaria: #D9D9D9;
     --cor-hover: #133448;
 
     --font-primaria: 'Kumbh Sans', sans-serif;
@@ -23,6 +24,11 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* <-- IMPORTANTE: evita faixa lateral */
 }
 
 body {
@@ -50,7 +56,7 @@ body {
 }
 
 .apresentacao {
-    padding: 2% 10%;
+    padding: 1% 10%;
 }
 
 .apresentacao_conteudo{
@@ -141,3 +147,78 @@ body {
     border-radius: 27px;
     z-index: -1;
 }
+
+.apresentacao__rect_calculadora__resultado {
+    color: var(--cor-secundaria);
+    font-family: var(--font-secundaria);
+    font-size: 32px;
+    background-color: var(--cor-terciaria);
+    width: 487px;
+    text-align: center;
+    padding: 29px;
+    border-radius: 10px;
+    margin-top: 45px;
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-secundaria);
+    height: 100%;
+    width: 100%;
+    margin-top: 400px;
+}
+.tabela__titulo {
+    color: var(--cor-secundaria);
+    font-family: var(--font-primaria);
+    font-size: 32px;
+    padding: 25px;
+    width: 349x;
+    background-color: var(--cor-primaria);
+    margin-top: 62px;
+    text-align: center;
+}
+
+.tabela__imc {
+    margin-top: 62px;
+    width: 1014px;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 15px;
+    font-family: var(--font-secundaria);
+    border-collapse: separate;
+    overflow: hidden;
+}
+
+.tabela__imc thead th {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    text-align: left;
+    background-color: var(--cor-quartenaria);
+}
+
+.tabela__imc tbody td {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.tabela__imc tbody tr:nth-child(even) {
+    background-color: var(--cor-quartenaria);
+}
+
+.tabela__imc td, .tabela__imc th {
+    padding: 16px 12px;
+    border-bottom: 1px solid var(--cor-primaria);
+}
+
+.tabela__imc tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela__imc td:not(:last-child), .tabela__imc th:not(:last-child) {
+    border-right: 1px solid var(--cor-primaria);
+}
+
+
+
