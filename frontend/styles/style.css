@@ -1,12 +1,117 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Koulen';
+    src: url(../assets/font/AMOQz46as3KIBPeWgnA9kuYMUg.ttf) format('truetype');
+}
 
 :root {
     --cor-primaria: #000000;
     --cor-secundaria: #FFFFFF;
     --cor-terciaria: #48A7E2;
     --cor-subtitulo: #D9D9D9;
-    --cor-hover: 
+    --cor-hover: #133448;
+
+    --font-primaria: 'Kumbh Sans', sans-serif;
+    --font-titulo: 'Koulen', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+}
+
+.apresentacao {
+    padding: 2% 10%;
+}
+
+.apresentacao_conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.apresentacao__conteudo__titulo {
+    margin-bottom: -50px;
+    font-size: 96px;
+    color: var(--cor-terciaria);
+    font-family: var(--font-titulo);
+}
+
+.apresentacao__conteudo__subtitulo {
+    margin-bottom: 50px;
+    margin-top: 0px;
+    font-size: 25px;
+    font-weight: 200;
+    color: var(--cor-secundaria);
+    font-family: var(--font-primaria);
+    font-weight: 200;
+    
+}
+
+.apresentacao__conteudo__texto {
+    color: var(--cor-secundaria);
+    font-family: var(--font-primaria);
+    font-size: 16px;
+    text-align: center;
+    width: 600px;   
+}
+/*
+.rect_calculadora {
+    background-color: var(--cor-secundaria);
+    margin-top: 49px;
+    width: 369px;
+    height: 413px;
+    border-radius: 27px;
+    box-shadow: 10px 2px 0 var(--cor-terciaria);
+}
+
+.rect_calculadora::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 15px;
+    z-index: -1;
+}
+*/
+
+.rect_calculadora {
+  position: relative;
+  background-color: white;
+  padding: 40px;
+  height: 365px;
+  width: 406px;
+  margin-top: 49px;
+  border-radius: 27px;
+  z-index: 1;
+
+}
+
+/* A linha azul */
+.rect_calculadora::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 5px;
+    width: 100%;
+    height: 100%; 
+    border-right: 3px solid #3fa9f5;
+    border-top: 3px solid #3fa9f5;
+    border-radius: 27px;
+    z-index: -1;
+}
+
+.apresentacao__rect_calculadora__resultado {
+    
+
 }
