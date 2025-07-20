@@ -40,8 +40,7 @@ body {
     background-color: var(--cor-primaria);
 }
 
-#calculadora,
-#tabela {
+#calculadora, #tabela {
     scroll-margin-top: 70px; 
 }
 
@@ -63,7 +62,7 @@ body {
 
 .cabecalho__menu__links {
     font-family: var(--font-secundaria);
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--cor-secundaria);
     text-decoration: none;
     margin-top: 5px;
@@ -71,7 +70,7 @@ body {
 
 .cabecalho__menu__links:hover {
     text-decoration: underline;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .apresentacao {
@@ -86,7 +85,7 @@ body {
 
 .apresentacao__conteudo__titulo {
     margin-bottom: -50px;
-    font-size: 96px;
+    font-size: 6rem;
     color: var(--cor-terciaria);
     font-family: var(--font-titulo);
     text-shadow: 2px 2px 0 var(--cor-secundaria);
@@ -96,27 +95,28 @@ body {
 .apresentacao__conteudo__subtitulo {
     margin-bottom: 50px;
     margin-top: 0px;
-    font-size: 25px;
+    font-size: 1.56rem;
     font-weight: 200;
     color: var(--cor-secundaria);
     font-family: var(--font-primaria);
-    font-weight: 200;
-    
 }
 
 .linha {
     background-color: var(--cor-secundaria);
-    width: 123px;
+    width: 100%;
+    max-width: 123px;
     height: 2px;
     margin-right: 360px;
     margin-bottom: 11px;
+    margin-top: 0px;
 }
 .apresentacao__conteudo__texto {
     color: var(--cor-secundaria);
     font-family: var(--font-primaria);
-    font-size: 16px;
+    font-size: 1rem;
     text-align: center;
-    width: 500px;   
+    width: 100%;
+    max-width: 500px;   
 }
 /*
 .rect_calculadora {
@@ -146,7 +146,8 @@ body {
   background-color: white;
   padding: 40px;
   height: 365px;
-  width: 406px;
+  width: 100%;
+  max-width: 406px;
   margin-top: 49px;
   border-radius: 27px;
   z-index: 1;
@@ -170,9 +171,10 @@ body {
 .apresentacao__rect_calculadora__resultado {
     color: var(--cor-secundaria);
     font-family: var(--font-secundaria);
-    font-size: 32px;
+    font-size: 2rem;
     background-color: var(--cor-terciaria);
-    width: 487px;
+    width: 100%;
+    max-width: 487px;
     text-align: center;
     padding: 29px;
     border-radius: 10px;
@@ -191,9 +193,10 @@ body {
 .tabela__titulo {
     color: var(--cor-secundaria);
     font-family: var(--font-primaria);
-    font-size: 32px;
+    font-size: 2rem;
     padding: 25px;
-    width: 349x;
+    width: 100%;
+    max-width: 349px;
     background-color: var(--cor-primaria);
     margin-top: 62px;
     text-align: center;
@@ -201,7 +204,8 @@ body {
 
 .tabela__imc {
     margin-top: 62px;
-    width: 1014px;
+    width: 100%;
+    max-width: 1014px;
     border: 2px solid var(--cor-primaria);
     border-radius: 15px;
     font-family: var(--font-secundaria);
@@ -211,7 +215,7 @@ body {
 }
 
 .tabela__imc thead th {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     padding-bottom: 20px;
     text-align: left;
@@ -219,7 +223,7 @@ body {
 }
 
 .tabela__imc tbody td {
-    font-size: 20px;
+    font-size: 1.25;
     font-weight: 600;
 }
 
@@ -249,7 +253,7 @@ body {
 }
 
 .rodape__titulo {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 30px;
 }
 
@@ -264,10 +268,11 @@ body {
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-primaria);
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 21,9px;
     text-decoration: None;
     font-family: var(--font-primaria);
@@ -276,4 +281,30 @@ body {
 
 .rodape__botoes__links:hover {
     background-color: var(--cor-hover);
+}
+
+@media (max-width: 800px) {
+ 
+    .apresentacao__conteudo__titulo {
+        font-size: 3rem;
+        padding: 45px;
+    }
+    
+    .apresentacao__conteudo__subtitulo {
+        font-size:  0.63rem;
+        margin-top: -14px;
+    }
+    .linha {
+        margin-top: -20px;
+        max-width: 60px;
+        height: 1.5px;
+        margin-right: 210px;
+        margin-bottom: 5px;
+    }
+    .apresentacao__conteudo__texto {
+        font-size: 0.56rem;
+        width: 100%;
+        max-width: 270px; 
+
+    }
 }
