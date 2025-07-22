@@ -15,10 +15,11 @@
     --cor-terciaria: #48A7E2;
     --cor-quartenaria: #D9D9D9;
     --cor-hover: #133448;
+    --cor-caixa_entrada: #CBCBCB;
 
     --font-primaria: 'Kumbh Sans', sans-serif;
-    --font-titulo: 'Koulen', sans-serif;
     --font-secundaria: 'League Spartan', sans-serif;
+    --font-terciaria: 'Koulen', sans-serif;
 }
 
 * {
@@ -87,7 +88,7 @@ body {
     margin-bottom: -50px;
     font-size: 6rem;
     color: var(--cor-terciaria);
-    font-family: var(--font-titulo);
+    font-family: var(--font-terciaria);
     text-shadow: 2px 2px 0 var(--cor-secundaria);
     letter-spacing: 2px;
 }
@@ -142,15 +143,18 @@ body {
 */
 
 .rect_calculadora {
-  position: relative;
-  background-color: white;
-  padding: 40px;
-  height: 365px;
-  width: 100%;
-  max-width: 406px;
-  margin-top: 49px;
-  border-radius: 27px;
-  z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: 40px;
+    height: 365px;
+    width: 100%;
+    max-width: 406px;
+    margin-top: 49px;
+    border-radius: 27px;
+    z-index: 1;
 
 }
 
@@ -168,6 +172,114 @@ body {
     z-index: -1;
 }
 
+fieldset {
+    border: 0;
+ }
+ 
+ .campo {
+     margin-bottom: 1em;
+ }
+
+ .grupo {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1em;
+ }
+ 
+ .campo_altura, .campo_peso {
+    flex-direction: column;    
+    margin-bottom: 0.15em;
+    color: #000000;
+    display: flex;
+    font-family: var(--font-secundaria);
+    font-size: 1.25em;
+}
+
+.campo_altura {
+    margin-top: 60px;
+}
+
+.campo_peso {
+    margin-top: 32px;
+}
+.asterisco {
+    font-family: var(--font-secundaria);
+    font-size: 1.25em;
+    color: red;
+}
+
+.medida {
+    font-size: 1em;
+    margin-left: 5px;
+
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input {
+        border-radius: 0;
+        height: 59.7px;
+        width: 100%;
+        max-width: 106px;
+        padding-left: 8px;
+    }
+    
+.campo input {    
+        border: 2px solid var(--cor-caixa_entrada);
+}
+
+input::placeholder {     /*mudando as palavras q tao dentro da caixa*/
+        font-family: var(--font-secundaria);
+        color: var(--cor-caixa_entrada);
+        font-size: 1.2em;
+}
+
+input:focus {  /*muda a caixa, pq quando clica aonde escreve, fica mais preta*/ outline: none;
+        border: 2px solid var(--cor-terciaria);
+}
+
+.botao_calcular {
+    font-family: var(--font-primaria);
+    font-size: 1.5em;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    border: 0;
+    border-radius:10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    max-width: 229px;
+    padding: 0.62em;
+    margin: 40px;
+
+}
+
+/*
+.botao_calcular {
+    font-family: var(--font-primaria);
+    font-size: 1.5em;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    border: 0;
+    border-radius:10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    max-width: 229px;
+    padding: 0.62em;
+    margin: 40px auto 0 auto 
+}
+*/
 .apresentacao__rect_calculadora__resultado {
     color: var(--cor-secundaria);
     font-family: var(--font-secundaria);
@@ -283,7 +395,7 @@ body {
     background-color: var(--cor-hover);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
  
     .apresentacao__conteudo__titulo {
         font-size: 3rem;
@@ -307,4 +419,105 @@ body {
         max-width: 270px; 
 
     }
+    .rect_calculadora {
+        padding: 20px;
+        height: 220px;
+        max-width: 240px;
+
+    }
+
+    .rect_calculadora::after {
+        top: -6px;
+        left: 4px;
+
+    }
+    
+    .campo_altura, .campo_peso {
+        font-size: 0.87em;
+    }
+    
+    .asterisco {
+        font-size: 0.87em;
+    }
+
+    .medida {
+        font-size. 0.75em;
+    }
+    
+    .campo_altura {
+        margin-top: 20px;
+    }
+
+    .campo_peso {
+        margin-top: 3.8px;
+        margin-bottom: 0px;
+    }
+    
+    input::placeholder {     
+        font-size: 0.68em;
+    }
+    
+    input {
+        height: 37.3px;
+        max-width: 75.3px;
+        padding: 3px;
+    }
+    .botao_calcular {
+        max-width: 163px;
+        padding: 8px;
+        margin-top: 15px;
+        margin-left: 35px;
+    }
+    
+    .apresentacao__rect_calculadora__resultado {
+        max-width: 250px;
+        padding: 20px;
+        font-size: 1.6rem;
+        margin-top: 34px;
+    }
 }
+
+/*
+.botao_calcular {
+}
+/*
+.botao_calcular {
+    font-family: var(--font-primaria);
+    font-size: 24px;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+    border: 0;
+    border-radius:10px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    max-width: 229px;
+    padding: 0.62em;
+    margin-left: 88px;
+    margin-top: 40px;
+}
+ .campo {
+     margin-bottom: 1em;
+ }
+
+ .grupo {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 1em;
+ }
+
+input {
+        border-radius: 0;
+        height: 59.7px;
+        width: 100%;
+        max-width: 106px;
+        padding-left: 8px;
+    }
+    
+.campo input {    
+        border: 2px solid var(--cor-caixa_entrada);
+}
+
+
+
