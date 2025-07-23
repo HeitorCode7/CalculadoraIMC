@@ -64,4 +64,3 @@ function Imc()
 
 }
 calcular.addEventListener('click', imc);
-
